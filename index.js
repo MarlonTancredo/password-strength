@@ -5,7 +5,7 @@ const feedbacks = {
 };
 
 const increaseProgressBar = (inputValue) => {
-  if (inputValue.length > 20) {
+  if (inputValue.length >= 20) {
     return "100%";
   }
   return `${inputValue.length * 5}%`;
@@ -19,33 +19,33 @@ const handleProgressBarColor = (inputValue) => {
   } else if (inputValue.length >= 12) {
     return "green";
   }
-  return "black";
+  return colors.black;
 };
 
 const handleFeedback = () => {
-  const internProgress = document.getElementById("intern");
+  const internProgress = document.querySelector(".progress__intern");
   return feedbacks[`${internProgress.style.backgroundColor}`];
 };
 
 const printFeedback = () => {
-  const container = document.getElementById("container");
+  const container = document.querySelector(".container");
   const feedback = document.createElement("p");
-  feedback.id = "feedback";
+  feedback.className = "container__feedback";
   feedback.textContent = handleFeedback();
   container.append(feedback);
 };
 
 const removeFeedback = () => {
-  const feedback = document.getElementById("feedback");
+  const feedback = document.querySelector(".container__feedback");
   if (feedback) {
     feedback.remove();
   }
 };
 
-const handlePasswordInput = (event) => {
+const handleProgressBar = (event) => {
   const inputValue = event.target.value;
 
-  const progressBar = document.getElementById("intern");
+  const progressBar = document.querySelector(".progress__intern");
   progressBar.style.width = increaseProgressBar(inputValue);
   progressBar.style.backgroundColor = handleProgressBarColor(inputValue);
 
@@ -54,4 +54,4 @@ const handlePasswordInput = (event) => {
 };
 
 const password = document.getElementById("password");
-password.addEventListener("input", handlePasswordInput);
+password.addEventListener("input", handleProgressBar);
