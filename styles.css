@@ -5,6 +5,9 @@
 
 :root {
   --black: #141115;
+  --red: #e63946;
+  --orange: #e76f51;
+  --green: #a7c957;
 }
 
 body {
@@ -32,7 +35,6 @@ body {
 
 .form__input {
   height: 2rem;
-  width: 100%;
   border: none;
   border-bottom: 1px var(--black) solid;
   outline: none;
@@ -60,8 +62,19 @@ body {
 }
 
 .progress__intern {
-  background-color: var(--black);
   border-radius: 15px;
   height: 100%;
   width: 0%;
+}
+
+.progress__intern--red {
+  background-color: var(--red);
+}
+
+.progress__intern--orange {
+  background-color: var(--orange);
+}
+
+.progress__intern--green {
+  background-color: var(--green);
 }
