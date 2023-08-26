@@ -35,6 +35,13 @@ const printFeedback = () => {
   container.append(feedback);
 };
 
+const removeFeedback = () => {
+  const feedback = document.getElementById("feedback");
+  if (feedback) {
+    feedback.remove();
+  }
+};
+
 const handlePasswordInput = (event) => {
   const inputValue = event.target.value;
 
@@ -42,6 +49,7 @@ const handlePasswordInput = (event) => {
   progressBar.style.width = increaseProgressBar(inputValue);
   progressBar.style.backgroundColor = handleProgressBarColor(inputValue);
 
+  removeFeedback();
   printFeedback();
 };
 
