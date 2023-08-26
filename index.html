@@ -3,35 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
     <title>Intro to the DOM - Assignment</title>
   </head>
   <body>
     <h1>How good is your password?</h1>
-    <div id="container" class="container">
-      <form  class="form" action="">
-        <label for="password">PASSWORD:</label>
+    <div class="container">
+      <form class="form" action="">
+        <label class="form__label" for="password">Password</label>
         <input
+          class="form__input"
           id="password"
           name="password"
           type="password"
-          maxlength="30"
+          maxlength="20"
           autocomplete="off"
         />
-      </form>
-      <div
-        id="progress-container"
-        class="progress-container"
-      >
-        <div
-          id="extern"
-          class="progress__extern"
-        >
-          <div
-            id="intern"
-            class="progress__intern"
-          ></div>
+        <div class="progress-container">
+        <label name="progress-container" class="progress-container__label"
+          >Progress:
+        </label>
+        <div class="progress__extern">
+          <div class="progress__intern"></div>
         </div>
+      </form>
     </div>
     <script type="text/javascript" src="./index.js"></script>
   </body>
