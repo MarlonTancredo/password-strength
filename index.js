@@ -23,7 +23,7 @@ const handleProgressBarColor = (inputValue) => {
 };
 
 const handleFeedback = () => {
-  const internProgress = document.getElementById("intern-progress");
+  const internProgress = document.getElementById("intern");
   return feedbacks[`${internProgress.style.backgroundColor}`];
 };
 
@@ -45,7 +45,7 @@ const removeFeedback = () => {
 const handlePasswordInput = (event) => {
   const inputValue = event.target.value;
 
-  const progressBar = document.getElementById("intern-progress");
+  const progressBar = document.getElementById("intern");
   progressBar.style.width = increaseProgressBar(inputValue);
   progressBar.style.backgroundColor = handleProgressBarColor(inputValue);
 
