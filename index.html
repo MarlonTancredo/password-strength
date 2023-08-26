@@ -3,24 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css">
     <title>Intro to the DOM - Assignment</title>
   </head>
-  <body style="
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-">
+  <body>
     <h1>How good is your password?</h1>
-    <div id="container"
-    style="
-      display: flex;
-      flex-direction: column;
-      width: 30rem;
-      justify-content: center;
-      align-items: center;
-    ">
-      <form action="">
+    <div id="container" class="container">
+      <form  class="form" action="">
         <label for="password">PASSWORD:</label>
         <input
           id="password"
@@ -32,21 +21,15 @@
       </form>
       <div
         id="progress-container"
-        style="
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-        "
+        class="progress-container"
       >
         <div
-          id="extern-progress"
-          name="extern-progress"
-          style="border: 1px black solid; height: 2rem; width: 100%"
+          id="extern"
+          class="progress__extern"
         >
           <div
-            id="intern-progress"
-            style="background-color: black; height: 100%; width: 0%"
+            id="intern"
+            class="progress__intern"
           ></div>
         </div>
     </div>
