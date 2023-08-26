@@ -4,6 +4,8 @@ const feedbacks = {
   green: "Grrrreat!",
 };
 
+const currentColor = { color: "" };
+
 const increaseProgressBar = (inputValue) => {
   if (inputValue.length >= 20) {
     return "100%";
@@ -13,25 +15,22 @@ const increaseProgressBar = (inputValue) => {
 
 const handleProgressBarColor = (inputValue) => {
   if (inputValue.length < 8) {
-    return "red";
+    currentColor.color = "red";
+    return "progress__intern progress__intern--red";
   } else if (inputValue.length >= 8 && inputValue.length < 12) {
-    return "orange";
+    currentColor.color = "orange";
+    return "progress__intern progress__intern--orange";
   } else if (inputValue.length >= 12) {
-    return "green";
+    currentColor.color = "green";
+    return "progress__intern progress__intern--green";
   }
-  return colors.black;
-};
-
-const handleFeedback = () => {
-  const internProgress = document.querySelector(".progress__intern");
-  return feedbacks[`${internProgress.style.backgroundColor}`];
 };
 
 const printFeedback = () => {
   const container = document.querySelector(".container");
   const feedback = document.createElement("p");
   feedback.className = "container__feedback";
-  feedback.textContent = handleFeedback();
+  feedback.textContent = feedbacks[`${currentColor.color}`];
   container.append(feedback);
 };
 
@@ -47,7 +46,7 @@ const handleProgressBar = (event) => {
 
   const progressBar = document.querySelector(".progress__intern");
   progressBar.style.width = increaseProgressBar(inputValue);
-  progressBar.style.backgroundColor = handleProgressBarColor(inputValue);
+  progressBar.className = handleProgressBarColor(inputValue);
 
   removeFeedback();
   printFeedback();
