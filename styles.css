@@ -3,6 +3,10 @@
   src: url(./fonts/RobotoMono-Regular.ttf);
 }
 
+:root {
+  --black: #141115;
+}
+
 body {
   font-family: robotoMono;
   display: flex;
@@ -29,7 +33,13 @@ body {
 .form__input {
   height: 2rem;
   width: 100%;
-  border-radius: none;
+  border: none;
+  border-bottom: 1px var(--black) solid;
+  outline: none;
+}
+
+.form__input:hover {
+  cursor: pointer;
 }
 
 .progress-container {
@@ -50,7 +60,7 @@ body {
 }
 
 .progress__intern {
-  background-color: black;
+  background-color: var(--black);
   border-radius: 15px;
   height: 100%;
   width: 0%;
