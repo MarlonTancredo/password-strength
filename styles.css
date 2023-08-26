@@ -1,4 +1,10 @@
+@font-face {
+  font-family: robotoMono;
+  src: url(./fonts/RobotoMono-Regular.ttf);
+}
+
 body {
+  font-family: robotoMono;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +20,16 @@ body {
 }
 
 .form {
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+
+.form__input {
+  height: 2rem;
+  width: 100%;
+  border-radius: none;
 }
 
 .progress-container {
@@ -22,16 +37,21 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-top: 20px;
+}
+
+.progress-container__label {
+  margin-right: 5px;
 }
 
 .progress__extern {
-  border: 1px black solid;
   height: 2rem;
   width: 100%;
 }
 
 .progress__intern {
   background-color: black;
+  border-radius: 15px;
   height: 100%;
   width: 0%;
 }
