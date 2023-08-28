@@ -55,10 +55,6 @@ body {
   margin-top: 20px;
 }
 
-.progress-container__label {
-  margin-right: 5px;
-}
-
 .progress__extern {
   height: 2rem;
   width: 100%;
