@@ -9,7 +9,7 @@
   <body>
     <h1>How good is your password?</h1>
     <div class="container">
-      <form class="form" action="">
+      <form class="form" action="/">
         <input
           class="form__input form__input--line-bottom"
           id="password"
@@ -19,14 +19,13 @@
           autocomplete="off"
           placeholder="Enter your password!"
         />
-        <div class="progress-container">
-        <label name="progress-container" class="progress-container__label"
-          >Progress:
-        </label>
-        <div class="progress__extern">
+      </form>
+      <div class="progress-container">
+        <p>Progress:</p>
+        <div id="progress__extern" class="progress__extern">
           <div class="progress__intern"></div>
         </div>
-      </form>
+      </div>
     </div>
     <script type="text/javascript" src="./index.js"></script>
   </body>
